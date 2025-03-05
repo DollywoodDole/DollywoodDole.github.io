@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roam Rx by NovaHealth Innovations</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body {
+            background: linear-gradient(135deg, #102027, #294c60);
+            color: #e0e1dd;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        .slide {
+            min-height: 100vh;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            padding: 20px;
+        }
+        .slide.active { display: flex; opacity: 1; animation: fadeIn 0.8s; }
+        h1 {
+            font-size: 4em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(38, 166, 154, 0.7);
+        }
+        h2 { font-size: 2.5em; margin-bottom: 20px; color: #26a69a; }
+        p { font-size: 1.3em; max-width: 900px; }
+        .btn {
+            padding: 15px 40px;
+            background: #26a69a;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.3em;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover { background: #4db6ac; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(38, 166, 154, 0.5); }
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .dot {
+            width: 15px;
+            height: 15px;
+            background: #e0e1dd;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: all 0.3s ease;
+        }
+        .dot.active { opacity: 1; background: #26a69a; transform: scale(1.3); }
+        .media {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+        .media:hover { transform: scale(1.05); }
+        canvas { max-width: 700px; margin: 25px 0; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .logo { font-size: 1.2em; color: #4db6ac; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Intro -->
+        <div class="slide" id="slide-1">
+            <h1>Roam Rx</h1>
+            <h2>Mobile Health for All</h2>
+            <p>From NovaHealth Innovations: We deliver care to 300,000 underserved people in Saskatchewan—starting with women’s health.</p>
+            <span class="logo">A NovaHealth Innovations Venture</span>
+            <button class="btn" onclick="nextSlide()">See the Vision</button>
+        </div>
+
+        <!-- Slide 2: Market Gap -->
+        <div class="slide" id="slide-2">
+            <h2>Health Access Crisis</h2>
+            <p>30% of Saskatchewan—300,000 people—lack care. Rural gaps hit women hardest, with $500M in ER overuse. We bridge that.</p>
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Saskatchewan Map" class="media">
+        </div>
+
+        <!-- Slide 3: Solution -->
+        <div class="slide" id="slide-3">
+            <h2>Mobile Clinics</h2>
+            <p>High-tech vans bring exams, diagnostics, and telehealth—50,000 patients/year with 10 units, prioritizing women’s needs.</p>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Mobile Van" class="media">
+        </div>
+
+        <!-- Slide 4: Operations -->
+        <div class="slide" id="slide-4">
+            <h2>How We Move</h2>
+            <p>5 days/week: 3 rural, 2 urban. 20 patients/day/van. Scaling to 50 vans by 2030—health equity in action.</p>
+            <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Rural Route" class="media">
+        </div>
+
+        <!-- Slide 5: Tech Edge -->
+        <div class="slide" id="slide-5">
+            <h2>Tech for All</h2>
+            <p>AI diagnostics ($10K/van), Starlink ($1,800/year/van), ultrasound ($50K/van). Precision care, no barriers.</p>
+            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Tech Setup" class="media">
+        </div>
+
+        <!-- Slide 6: Team -->
+        <div class="slide" id="slide-6">
+            <h2>Our Team</h2>
+            <p>NPs, RNs, Counselors, Techs—$310K/van/year. 40 trained in 6 weeks for inclusive, mobile care.</p>
+            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Diverse Team" class="media">
+        </div>
+
+        <!-- Slide 7: Financials -->
+        <div class="slide" id="slide-7">
+            <h2>Profit Path</h2>
+            <p>$3M startup, $1.8M revenue (10 vans). $1M profit by 2028 (20 vans). $5M raise scales to $5M/year by 2030.</p>
+            <canvas id="profitChart"></canvas>
+        </div>
+
+        <!-- Slide 8: Why Us -->
+        <div class="slide" id="slide-8">
+            <h2>Unrivaled Impact</h2>
+            <p>No mobile rival in SK tackles women’s health like us. We outmove clinics, save SHA $5M/year.</p>
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Health Equity" class="media">
+        </div>
+
+        <!-- Slide 9: ROI -->
+        <div class="slide" id="slide-9">
+            <h2>Your Return</h2>
+            <p>2025: Pilot. 2026: Revenue. 2028: 15% ROI ($1M profit). 2030: 25% ROI ($5M profit). Invest now.</p>
+            <canvas id="roiChart"></canvas>
+        </div>
+
+        <!-- Slide 10: Call to Action -->
+        <div class="slide" id="slide-10">
+            <h2>Join the Future</h2>
+            <p>$1M stakes you in—15% by 2028, 25% by 2030. NovaHealth & SHA back us. Transform health equity.</p>
+            <button class="btn">Invest Today</button>
+        </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+        <div class="dot" onclick="goToSlide(3)"></div>
+        <div class="dot" onclick="goToSlide(4)"></div>
+        <div class="dot" onclick="goToSlide(5)"></div>
+        <div class="dot" onclick="goToSlide(6)"></div>
+        <div class="dot" onclick="goToSlide(7)"></div>
+        <div class="dot" onclick="goToSlide(8)"></div>
+        <div class="dot" onclick="goToSlide(9)"></div>
+        <div class="dot" onclick="goToSlide(10)"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let currentSlide = 1;
+
+        function showSlide(slideNum) {
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.querySelector(`#slide-${slideNum}`).classList.add('active');
+            document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+            document.querySelector(`.nav-dots .dot:nth-child(${slideNum})`).classList.add('active');
+            currentSlide = slideNum;
+
+            if (slideNum === 7) drawProfitChart();
+            if (slideNum === 9) drawRoiChart();
+        }
+
+        function nextSlide() {
+            const next = currentSlide < 10 ? currentSlide + 1 : 1;
+            showSlide(next);
+        }
+
+        function goToSlide(slideNum) {
+            showSlide(slideNum);
+        }
+
+        function drawProfitChart() {
+            const ctx = document.getElementById('profitChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2025', '2026', '2027', '2028', '2030'],
+                    datasets: [{
+                        label: 'Profit ($M)',
+                        data: [-1, -1.7, 0, 1, 5],
+                        borderColor: '#26a69a',
+                        backgroundColor: 'rgba(38, 166, 154, 0.2)',
+                        fill: true
+                    }]
+                },
+                options: { scales: { y: { beginAtZero: true } } }
+            });
+        }
+
+        function drawRoiChart() {
+            const ctx = document.getElementById('roiChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['2025', '2026', '2027', '2028', '2030'],
+                    datasets: [{
+                        label: 'ROI (%)',
+                        data: [0, 0, 0, 15, 25],
+                        backgroundColor: '#26a69a'
+                    }]
+                },
+                options: { scales: { y: { beginAtZero: true, max: 30 } } }
+            });
+        }
+
+        showSlide(1);
+    </script>
+</body>
+</html>
