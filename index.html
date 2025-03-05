@@ -7,7 +7,7 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
         body {
-            background: linear-gradient(135deg, #102027, #294c60);
+            background: linear-gradient(135deg, #0d1b2a, #1b263b);
             color: #e0e1dd;
             overflow-x: hidden;
             line-height: 1.6;
@@ -34,13 +34,13 @@
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(38, 166, 154, 0.7);
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.7);
         }
-        h2 { font-size: 2.5em; margin-bottom: 20px; color: #26a69a; }
+        h2 { font-size: 2.5em; margin-bottom: 20px; color: #ff6b6b; }
         p { font-size: 1.3em; max-width: 900px; }
         .btn {
             padding: 15px 40px;
-            background: #26a69a;
+            background: #ff6b6b;
             color: #fff;
             border: none;
             border-radius: 30px;
@@ -49,7 +49,7 @@
             margin-top: 25px;
             transition: all 0.3s ease;
         }
-        .btn:hover { background: #4db6ac; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(38, 166, 154, 0.5); }
+        .btn:hover { background: #ff8787; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5); }
         .nav-dots {
             position: fixed;
             right: 30px;
@@ -68,7 +68,7 @@
             opacity: 0.4;
             transition: all 0.3s ease;
         }
-        .dot.active { opacity: 1; background: #26a69a; transform: scale(1.3); }
+        .dot.active { opacity: 1; background: #ff6b6b; transform: scale(1.3); }
         .media {
             width: 100%;
             max-width: 700px;
@@ -81,7 +81,7 @@
         .media:hover { transform: scale(1.05); }
         canvas { max-width: 700px; margin: 25px 0; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .logo { font-size: 1.2em; color: #4db6ac; margin-top: 10px; }
+        .logo { font-size: 1.2em; color: #ff8787; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -89,72 +89,72 @@
         <!-- Slide 1: Intro -->
         <div class="slide" id="slide-1">
             <h1>Roam Rx</h1>
-            <h2>Mobile Health for All</h2>
-            <p>From NovaHealth Innovations: We deliver care to 300,000 underserved people in Saskatchewan—starting with women’s health.</p>
+            <h2>Mobile Women’s Health Revolution</h2>
+            <p>From NovaHealth Innovations: We bring cutting-edge care to 300,000 underserved women in Saskatchewan—profitably.</p>
             <span class="logo">A NovaHealth Innovations Venture</span>
             <button class="btn" onclick="nextSlide()">See the Vision</button>
         </div>
 
         <!-- Slide 2: Market Gap -->
         <div class="slide" id="slide-2">
-            <h2>Health Access Crisis</h2>
-            <p>30% of Saskatchewan—300,000 people—lack care. Rural gaps hit women hardest, with $500M in ER overuse. We bridge that.</p>
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Saskatchewan Map" class="media">
+            <h2>300,000 Women Left Behind</h2>
+            <p>In Saskatchewan, 30% of women lack care. Rural trips hit 200+ km. ER overuse costs $500M yearly. Roam Rx changes that.</p>
+            <img src="https://via.placeholder.com/700x350?text=SK+Underserved+Map" alt="Market Gap" class="media">
         </div>
 
         <!-- Slide 3: Solution -->
         <div class="slide" id="slide-3">
-            <h2>Mobile Clinics</h2>
-            <p>High-tech vans bring exams, diagnostics, and telehealth—50,000 patients/year with 10 units, prioritizing women’s needs.</p>
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Mobile Van" class="media">
+            <h2>Vans That Heal</h2>
+            <p>High-tech sprinter vans: exam rooms, diagnostics, telehealth. 50,000 patients/year with 10 units—care where it’s needed most.</p>
+            <img src="https://via.placeholder.com/700x350?text=Roam+Rx+Van+Interior" alt="Van" class="media">
         </div>
 
         <!-- Slide 4: Operations -->
         <div class="slide" id="slide-4">
-            <h2>How We Move</h2>
-            <p>5 days/week: 3 rural, 2 urban. 20 patients/day/van. Scaling to 50 vans by 2030—health equity in action.</p>
-            <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Rural Route" class="media">
+            <h2>Rolling Out Results</h2>
+            <p>5 days/week: 3 rural, 2 urban. 20 patients/day/van. From pilot to 50 vans by 2030—scalable impact.</p>
+            <img src="https://via.placeholder.com/700x350?text=Route+Map" alt="Routes" class="media">
         </div>
 
         <!-- Slide 5: Tech Edge -->
         <div class="slide" id="slide-5">
-            <h2>Tech for All</h2>
-            <p>AI diagnostics ($10K/van), Starlink ($1,800/year/van), ultrasound ($50K/van). Precision care, no barriers.</p>
-            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Tech Setup" class="media">
+            <h2>Tech That Transforms</h2>
+            <p>AI diagnostics ($10K/van), Starlink ($1,800/year/van), portable ultrasound ($50K/van). Precision care, anywhere.</p>
+            <img src="https://via.placeholder.com/700x350?text=AI+Tech+Demo" alt="Tech" class="media">
         </div>
 
         <!-- Slide 6: Team -->
         <div class="slide" id="slide-6">
-            <h2>Our Team</h2>
-            <p>NPs, RNs, Counselors, Techs—$310K/van/year. 40 trained in 6 weeks for inclusive, mobile care.</p>
-            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Diverse Team" class="media">
+            <h2>Built by Experts</h2>
+            <p>NP, RN, Counselor, Driver—$310K/van/year. 40 staff trained in 6 weeks for mobile tech mastery.</p>
+            <img src="https://via.placeholder.com/700x350?text=Team+Training" alt="Team" class="media">
         </div>
 
         <!-- Slide 7: Financials -->
         <div class="slide" id="slide-7">
-            <h2>Profit Path</h2>
-            <p>$3M startup, $1.8M revenue (10 vans). $1M profit by 2028 (20 vans). $5M raise scales to $5M/year by 2030.</p>
+            <h2>Profit Blueprint</h2>
+            <p>$3M startup, $1.8M revenue (10 vans). $1M profit by 2028 (20 vans). $5M raise scales us to $5M/year by 2030.</p>
             <canvas id="profitChart"></canvas>
         </div>
 
         <!-- Slide 8: Why Us -->
         <div class="slide" id="slide-8">
-            <h2>Unrivaled Impact</h2>
-            <p>No mobile rival in SK tackles women’s health like us. We outmove clinics, save SHA $5M/year.</p>
-            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Health Equity" class="media">
+            <h2>Unmatched Edge</h2>
+            <p>No mobile women’s health rival in SK. We outmove clinics, outtouch telehealth, save SHA $5M/year.</p>
+            <img src="https://via.placeholder.com/700x350?text=Competitive+Edge" alt="Edge" class="media">
         </div>
 
         <!-- Slide 9: ROI -->
         <div class="slide" id="slide-9">
             <h2>Your Return</h2>
-            <p>2025: Pilot. 2026: Revenue. 2028: 15% ROI ($1M profit). 2030: 25% ROI ($5M profit). Invest now.</p>
+            <p>2025: Pilot. 2026: Revenue. 2028: 15% ROI ($1M profit). 2030: 25% ROI ($5M profit). Invest now, win big.</p>
             <canvas id="roiChart"></canvas>
         </div>
 
         <!-- Slide 10: Call to Action -->
         <div class="slide" id="slide-10">
-            <h2>Join the Future</h2>
-            <p>$1M stakes you in—15% by 2028, 25% by 2030. NovaHealth & SHA back us. Transform health equity.</p>
+            <h2>Change the World, Cash In</h2>
+            <p>$1M stakes your claim—15% ROI by 2028, 25% by 2030. NovaHealth & SHA back us. Be part of it.</p>
             <button class="btn">Invest Today</button>
         </div>
     </div>
@@ -206,8 +206,8 @@
                     datasets: [{
                         label: 'Profit ($M)',
                         data: [-1, -1.7, 0, 1, 5],
-                        borderColor: '#26a69a',
-                        backgroundColor: 'rgba(38, 166, 154, 0.2)',
+                        borderColor: '#ff6b6b',
+                        backgroundColor: 'rgba(255, 107, 107, 0.2)',
                         fill: true
                     }]
                 },
@@ -224,7 +224,7 @@
                     datasets: [{
                         label: 'ROI (%)',
                         data: [0, 0, 0, 15, 25],
-                        backgroundColor: '#26a69a'
+                        backgroundColor: '#ff6b6b'
                     }]
                 },
                 options: { scales: { y: { beginAtZero: true, max: 30 } } }
